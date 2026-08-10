@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "squarepots",
+    "url": "https://github.com/squarepots"
+  },
+  "description": "Claude SEO v2.2.4 workflows adapted to Codex Skills and native subagents.",
+  "homepage": "https://github.com/squarepots/claude-seo-for-codex",
+  "interface": {
+    "brandColor": "#16A34A",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "category": "Productivity",
+    "defaultPrompt": "Use $seo to run a current Claude SEO workflow. Ask before setup and report unavailable optional integrations without guessing.",
+    "developerName": "AgriciDaniel (upstream) · squarepots (Codex adaptation)",
+    "displayName": "Claude SEO for Codex",
+    "longDescription": "Runs Claude SEO v2.2.4 through Codex-native skills, generic subagents, and an isolated cross-platform runtime.",
+    "shortDescription": "Current Claude SEO workflows adapted for Codex.",
+    "websiteURL": "https://github.com/AgriciDaniel/claude-seo"
+  },
+  "keywords": [
+    "seo",
+    "technical-seo",
+    "content-quality",
+    "schema",
+    "geo",
+    "codex"
+  ],
+  "license": "MIT",
+  "name": "claude-seo-for-codex",
+  "repository": "https://github.com/squarepots/claude-seo-for-codex",
+  "skills": "./skills/",
+  "version": "2.2.4+codex.1"
+}

@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.venv/
+ms-playwright/
+runtime-state.json
+.setup.lock
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+set -eu
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+RUNTIME="$SCRIPT_DIR/../scripts/runtime.py"
+
+if [ ! -f "$RUNTIME" ]; then
+  echo 'Claude SEO runtime is missing from the locked plugin snapshot.' >&2
+  exit 2
+fi
+
+PYTHON=''
+for candidate in python3 python; do
+  if command -v "$candidate" >/dev/null 2>&1 && "$candidate" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)' >/dev/null 2>&1; then
+    PYTHON=$candidate
+    break
+  fi
+done
+
+if [ -z "$PYTHON" ]; then
+  echo 'Python 3.10 or newer is required. Install Python, then run $seo setup.' >&2
+  exit 2
+fi
+
+exec "$PYTHON" "$RUNTIME" "$@"
